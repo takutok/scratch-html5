@@ -37,6 +37,8 @@ SensingPrims.prototype.addPrimsTo = function(primTable) {
 
     primTable['timeAndDate']  = function(b) { return runtime.getTimeString(interp.arg(b, 0)); };
     primTable['timestamp'] = this.primTimestamp;
+    
+    primTable['getUserName'] = this.primUsername;
 };
 
 SensingPrims.prototype.primTouching = function(b) {
@@ -56,6 +58,10 @@ SensingPrims.prototype.primTouching = function(b) {
     if (s2 == null || !s2.visible) return false;
 
     return spriteHitTest(s, s2);
+};
+
+SensingPrims.prototype.primUsername = function(b) {
+     return typeof Scratch !== 'undefined' && typeof Scratch.INIT_DATA !== 'undefined' && typeof Scratch.INIT_DATA.LOGGED_IN_USER !== 'undefined' && typeof Scratch.INIT_DATA.LOGGED_IN_USER.model !== 'undefined'?Scratch.INIT_DATA.LOGGED_IN_USER.model.username:''; // Scratch.INIT_DATA.LOGGED_IN_USER.model.username is what is used on the Scratch website
 };
 
 SensingPrims.prototype.primTouchingColor = function(b) {
