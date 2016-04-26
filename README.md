@@ -1,3 +1,5 @@
+Hi I am IcyCoder and I am working on making the scratch-html5 project active again. It has a bunch of ignored pull requests that I will look to aprove faster! Make a Pull Request Today!
+
 # Scratch HTML5 Player
 
 This project aims to create a Scratch Player in HTML5.  Scratch is currently implemented with Actionscript 3 and requires the Flash Player version 10.2.  Since Flash does not run on iOS (iPads, iPods, etc) and newer Android devices, we would like to have an HTML5 version to display (but not edit) projects on mobile devices. Scratch projects played in the HTML5 player should look and behave as closely as possible to the way they look and behave when played by the Flash player.  We will not be accepting pull requests for new features that don't already exist in the Flash based Scratch project player.
