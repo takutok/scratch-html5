@@ -112,6 +112,9 @@ Reporter.prototype.update = function() {
         case 'timer':
             newValue = '' + Math.round(interp.primitiveTable.timer() * 10) / 10;
             break;
+        case 'timeAndDate':
+            newValue = runtime.getTimeString(this.param);
+            break;
         case 'soundLevel':
             newValue = '' + runtime.soundLevel();
             break;
@@ -122,7 +125,7 @@ Reporter.prototype.update = function() {
     newValue = '' + newValue;
     this.valueEl.html(newValue);
     if (this.mode == 3) {
-        this.slider.val(Number(newValue));
+        this.slider.val(Number(newValue)).hide().width(this.el.width()-5).show();
     }
 };
 
