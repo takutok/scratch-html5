@@ -305,6 +305,8 @@ Interpreter.prototype.initPrims = function() {
     this.primitiveTable['showBubble'] = function(b) { console.log(interp.arg(b, 1)); };
     this.primitiveTable['timerReset'] = function(b) { interp.timerBase = Date.now(); };
     this.primitiveTable['timer'] = function(b) { return (Date.now() - interp.timerBase) / 1000; };
+    
+    this.primitiveTable['whenSensorGreaterThan'] = this.primNoop;
 
     new Primitives().addPrimsTo(this.primitiveTable);
 };
