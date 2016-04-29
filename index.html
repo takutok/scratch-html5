@@ -38,6 +38,7 @@
     <script src="js/Runtime.js" defer></script>
     <script src="js/Scratch.js" defer></script> 
     <script src="js/init.js" defer></script>
+    <script type="text/javascript" src="js/util/jszip.min.js" defer></script>
 </head>
 <body>
     <div id=player-container>
@@ -64,7 +65,8 @@
     </div>
 
     <div id=project-picker>
-        <span id=address-hint>http://scratch.mit.edu/projects/</span><input id=project-id placeholder=10000160><button id=go-project>&rarr;</button>
+        <span id=address-hint>http://scratch.mit.edu/projects/</span><input id=project-id placeholder=10000160><button id=go-project>&rarr;</button><br/>
+      <input type="file" id="file-picker" name="file-picker" />
     </div>
 
     <h1>Scratch HTML5 player</h1>
