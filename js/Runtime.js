@@ -127,11 +127,12 @@ Runtime.prototype.startEdgeTriggeredHats = function() {
      }
     runtime.allStacksDo(startIfEdgeTriggered);
 };
- +Runtime.prototype.processEdgeTriggeredHats = function() {
- +    if (runtime.allowProcessEdgeTriggerHats){
- +        runtime.startEdgeTriggeredHats();
- +    }
- +};
+
+Runtime.prototype.processEdgeTriggeredHats = function() {
+    if (runtime.allowProcessEdgeTriggerHats){
+        runtime.startEdgeTriggeredHats();
+    }
+};
 
 // Stack functions -- push and remove stacks
 // to be run by the interpreter as threads.
